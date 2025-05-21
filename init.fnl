@@ -3,6 +3,8 @@
 (set vim.o.relativenumber true)
 (set vim.o.signcolumn :yes)
 (set vim.o.mouse "")
+(set vim.o.incsearch true)
+(set vim.o.smartcase true)
 (set vim.g.mapleader " ")
 (set vim.g.maplocalleader ",")
 (vim.keymap.set :n "go" "m`o<esc>``")
