@@ -4,7 +4,9 @@
 (set vim.o.signcolumn :yes)
 (set vim.o.mouse "")
 (set vim.o.incsearch true)
+(set vim.o.ignorecase true)
 (set vim.o.smartcase true)
+(set vim.o.scrolloff 5)
 (set vim.g.mapleader " ")
 (set vim.g.maplocalleader ",")
 (vim.keymap.set :n "go" "m`o<esc>``")
@@ -115,6 +117,7 @@
 (vim.lsp.enable "basedpyright")
 (vim.lsp.enable "clojure_lsp")
 (vim.lsp.enable "css")
+(vim.lsp.enable "nil_ls")
 (vim.lsp.enable "ts_ls")
 (vim.lsp.enable "zls")
 

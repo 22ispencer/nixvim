@@ -112,6 +112,7 @@
           # this includes LSPs
           lspsAndRuntimeDeps = {
             general = with pkgs; [
+              nil
             ];
           };
 

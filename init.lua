@@ -4,7 +4,9 @@ vim.o.relativenumber = true
 vim.o.signcolumn = "yes"
 vim.o.mouse = ""
 vim.o.incsearch = true
+vim.o.ignorecase = true
 vim.o.smartcase = true
+vim.o.scrolloff = 5
 vim.g.mapleader = " "
 vim.g.maplocalleader = ","
 vim.keymap.set("n", "go", "m`o<esc>``")
@@ -71,6 +73,7 @@ vim.keymap.set("n", "<leader>g", "<cmd>Neogit<cr>", {desc = "neo[g]it"})
 vim.lsp.enable("basedpyright")
 vim.lsp.enable("clojure_lsp")
 vim.lsp.enable("css")
+vim.lsp.enable("nil_ls")
 vim.lsp.enable("ts_ls")
 vim.lsp.enable("zls")
 local snacks = require("snacks")
