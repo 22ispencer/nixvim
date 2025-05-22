@@ -136,6 +136,7 @@
               vim-surround
               blink-cmp
               friendly-snippets
+              nvim-parinfer
               # code formatting
               conform-nvim
               # lsp
