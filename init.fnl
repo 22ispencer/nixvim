@@ -115,15 +115,6 @@
 
 (vim.keymap.set :n "<leader>g" "<cmd>Neogit<cr>" {:desc "neo[g]it"})
 
-;; LSPs
-(vim.lsp.enable "basedpyright")
-(vim.lsp.enable "clojure_lsp")
-(vim.lsp.enable "css")
-(vim.lsp.enable "nil_ls")
-(vim.lsp.enable "gopls")
-(vim.lsp.enable "ts_ls")
-(vim.lsp.enable "zls")
-
 ;;; ----- other -----
 (let [snacks (require :snacks)]
   (snacks.setup {:statuscolumn {}

@@ -70,12 +70,5 @@ do
   vim.keymap.set("n", "<leader>e", files.open, {desc = "file [e]xplorer"})
 end
 vim.keymap.set("n", "<leader>g", "<cmd>Neogit<cr>", {desc = "neo[g]it"})
-vim.lsp.enable("basedpyright")
-vim.lsp.enable("clojure_lsp")
-vim.lsp.enable("css")
-vim.lsp.enable("nil_ls")
-vim.lsp.enable("gopls")
-vim.lsp.enable("ts_ls")
-vim.lsp.enable("zls")
 local snacks = require("snacks")
 return snacks.setup({statuscolumn = {}, input = {}, notifier = {}})
