@@ -49,7 +49,7 @@ do
 end
 do
   local conform = require("conform")
-  conform.setup({formatters_by_ft = {nix = {"nixfmt"}, python = {"black"}}, format_on_save = {timeout_ms = 500, lsp_format = "fallback"}})
+  conform.setup({formatters_by_ft = {nix = {"nixfmt"}, python = {"black"}, go = {"gofmt"}}, format_on_save = {timeout_ms = 500, lsp_format = "fallback"}})
 end
 do
   local cmp = require("blink.cmp")
@@ -74,6 +74,7 @@ vim.lsp.enable("basedpyright")
 vim.lsp.enable("clojure_lsp")
 vim.lsp.enable("css")
 vim.lsp.enable("nil_ls")
+vim.lsp.enable("gopls")
 vim.lsp.enable("ts_ls")
 vim.lsp.enable("zls")
 local snacks = require("snacks")
