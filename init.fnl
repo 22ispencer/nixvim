@@ -113,10 +113,16 @@
   (files.setup)
   (vim.keymap.set :n "<leader>e" files.open {:desc "file [e]xplorer"}))
 
+(let [visits (require :mini.visits)]
+  (visits.setup))
+
 (vim.keymap.set :n "<leader>g" "<cmd>Neogit<cr>" {:desc "neo[g]it"})
 
 ;;; ----- other -----
+(let [extra (require :mini.extra)]
+  (extra.setup))
+
 (let [snacks (require :snacks)]
-  (snacks.setup {:statuscolumn {}
-                 :input {}
-                 :notifier {}}))
+  (snacks.setup {:input {}
+                 :notifier {}
+                 :statuscolumn {}}))

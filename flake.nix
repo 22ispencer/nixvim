@@ -113,6 +113,7 @@
           lspsAndRuntimeDeps = {
             general = with pkgs; [
               nil
+              chafa
             ];
           };
 
@@ -231,6 +232,7 @@
               gitPlugins = true;
               customPlugins = true;
               test = true;
+              lakeImage = ./assets/lake.png;
               example = {
                 youCan = "add more than just booleans";
                 toThisSet = [

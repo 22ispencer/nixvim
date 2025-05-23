@@ -69,6 +69,14 @@ do
   files.setup()
   vim.keymap.set("n", "<leader>e", files.open, {desc = "file [e]xplorer"})
 end
+do
+  local visits = require("mini.visits")
+  visits.setup()
+end
 vim.keymap.set("n", "<leader>g", "<cmd>Neogit<cr>", {desc = "neo[g]it"})
+do
+  local extra = require("mini.extra")
+  extra.setup()
+end
 local snacks = require("snacks")
-return snacks.setup({statuscolumn = {}, input = {}, notifier = {}})
+return snacks.setup({input = {}, notifier = {}, statuscolumn = {}})
