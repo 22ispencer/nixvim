@@ -130,7 +130,7 @@
 
               ## UI
               # colorscheme
-              sonokai
+              catppuccin-nvim
               # syntax highlighting
               nvim-treesitter.withAllGrammars
 
@@ -149,6 +149,7 @@
               neogit
               plenary-nvim
               diffview-nvim
+              vim-tmux-navigator
             ];
           };
 

@@ -14,8 +14,7 @@
 
 ;;; ----- UI -----
 ;; colorscheme
-(set vim.g.sonokai_style :shusia)
-(vim.cmd.colorscheme :sonokai)
+(vim.cmd.colorscheme :catppuccin)
 
 ;; treesitter
 (let [ts-configs (require :nvim-treesitter.configs)]

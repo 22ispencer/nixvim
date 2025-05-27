@@ -11,8 +11,7 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = ","
 vim.keymap.set("n", "go", "m`o<esc>``")
 vim.keymap.set("n", "gO", "m`O<esc>``")
-vim.g.sonokai_style = "shusia"
-vim.cmd.colorscheme("sonokai")
+vim.cmd.colorscheme("catppuccin")
 do
   local ts_configs = require("nvim-treesitter.configs")
   ts_configs.setup({highlight = {enable = true}, incremental_selection = {enable = true}})
