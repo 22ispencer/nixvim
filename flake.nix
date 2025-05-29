@@ -114,6 +114,7 @@
             general = with pkgs; [
               nil
               chafa
+              elixir-ls
             ];
           };
 
@@ -234,6 +235,7 @@
               customPlugins = true;
               test = true;
               lakeImage = ./assets/lake.png;
+              elixirlsPath = "${pkgs.elixir-ls}/bin/elixir-ls";
               example = {
                 youCan = "add more than just booleans";
                 toThisSet = [

@@ -73,7 +73,7 @@ do
   visits.setup()
 end
 vim.keymap.set("n", "<leader>g", "<cmd>Neogit<cr>", {desc = "neo[g]it"})
-vim.lsp.config("elixirls", {cmd = "elixir-ls"})
+vim.lsp.config("elixirls", {cmd = nixCats("elixirlsPath")})
 do
   local configs = {}
   for _, v in ipairs(vim.api.nvim_get_runtime_file("lsp/*", true)) do

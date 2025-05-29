@@ -118,7 +118,7 @@
 (vim.keymap.set :n "<leader>g" "<cmd>Neogit<cr>" {:desc "neo[g]it"})
 
 ;; enable all lsp-config LSPs
-(vim.lsp.config "elixirls" {:cmd "elixir-ls"})
+(vim.lsp.config "elixirls" {:cmd (nixCats "elixirlsPath")})
 (let [configs {}]
   (each [_ v (ipairs (vim.api.nvim_get_runtime_file "lsp/*" true))]
     (let [name (vim.fn.fnamemodify v ":t:r")]
