@@ -1,4 +1,4 @@
 -- [nfnl] after/ftplugin/go.fnl
-vim.o.shiftwidth = 2
-vim.o.tabstop = 2
-return vim.lsp.enable("gopls")
+vim.o.shiftwidth = 8
+vim.o.tabstop = 8
+return nil

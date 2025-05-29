@@ -117,6 +117,13 @@
 
 (vim.keymap.set :n "<leader>g" "<cmd>Neogit<cr>" {:desc "neo[g]it"})
 
+;; enable all lsp-config LSPs
+(let [configs {}]
+  (each [_ v (ipairs (vim.api.nvim_get_runtime_file "lsp/*" true))]
+    (let [name (vim.fn.fnamemodify v ":t:r")]
+      (tset configs name true)))
+  (vim.lsp.enable (vim.tbl_keys configs)))
+
 ;;; ----- other -----
 (let [extra (require :mini.extra)]
   (extra.setup))

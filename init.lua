@@ -74,6 +74,14 @@ do
 end
 vim.keymap.set("n", "<leader>g", "<cmd>Neogit<cr>", {desc = "neo[g]it"})
 do
+  local configs = {}
+  for _, v in ipairs(vim.api.nvim_get_runtime_file("lsp/*", true)) do
+    local name = vim.fn.fnamemodify(v, ":t:r")
+    configs[name] = true
+  end
+  vim.lsp.enable(vim.tbl_keys(configs))
+end
+do
   local extra = require("mini.extra")
   extra.setup()
 end
