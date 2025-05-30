@@ -7,6 +7,8 @@
 (set vim.o.ignorecase true)
 (set vim.o.smartcase true)
 (set vim.o.scrolloff 5)
+(set vim.o.splitright true)
+(set vim.o.splitbelow true)
 (set vim.g.mapleader " ")
 (set vim.g.maplocalleader ",")
 (vim.keymap.set :n "go" "m`o<esc>``")
@@ -119,6 +121,7 @@
 
 ;; enable all lsp-config LSPs
 (vim.lsp.config "elixirls" {:cmd [(nixCats "elixirlsPath")]})
+(vim.lsp.config "html" {:filetypes [:html :templ :heex]})
 (let [configs {}]
   (each [_ v (ipairs (vim.api.nvim_get_runtime_file "lsp/*" true))]
     (let [name (vim.fn.fnamemodify v ":t:r")]

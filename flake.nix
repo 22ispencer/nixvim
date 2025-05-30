@@ -115,6 +115,7 @@
               nil
               chafa
               elixir-ls
+              vscode-langservers-extracted
             ];
           };
 

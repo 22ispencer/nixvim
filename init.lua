@@ -7,6 +7,8 @@ vim.o.incsearch = true
 vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.o.scrolloff = 5
+vim.o.splitright = true
+vim.o.splitbelow = true
 vim.g.mapleader = " "
 vim.g.maplocalleader = ","
 vim.keymap.set("n", "go", "m`o<esc>``")
@@ -74,6 +76,7 @@ do
 end
 vim.keymap.set("n", "<leader>g", "<cmd>Neogit<cr>", {desc = "neo[g]it"})
 vim.lsp.config("elixirls", {cmd = {nixCats("elixirlsPath")}})
+vim.lsp.config("html", {filetypes = {"html", "templ", "heex"}})
 do
   local configs = {}
   for _, v in ipairs(vim.api.nvim_get_runtime_file("lsp/*", true)) do
